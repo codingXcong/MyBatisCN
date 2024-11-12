@@ -24,6 +24,7 @@ import org.apache.ibatis.reflection.property.PropertyTokenizer;
 /**
  * @author Clinton Begin
  * 对象或者对象集合的包装器
+ * 封装的是对象元信息，抽象了一个对象的属性信息，并提供了查询对象属性信息的相关方法，以及更新属性值的相关方法
  */
 public interface ObjectWrapper {
 

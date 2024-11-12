@@ -14,6 +14,6 @@
  *    limitations under the License.
  */
 /**
- * Contains the statement executors.
+ * MyBatis的核心模块，负责SQL的具体执行
  */
 package org.apache.ibatis.executor;

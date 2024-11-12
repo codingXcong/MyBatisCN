@@ -169,6 +169,12 @@ public class MetaClass {
     return reflector.getSetInvoker(name);
   }
 
+  /**
+   * order.deliveryAddress.customer.name。
+   * MetaClass 会逐层处理这个表达式，首先通过 Order 类型对应的 Reflector 查找 deliveryAddress 属性，
+   * 查找成功之后，根据 deliveryAddress 属性的类型（即 Address 类型）创建对应的 MetaClass 对象（以及底层的 Reflector 对象），
+   * 再继续查找其中的 customer 属性，如此递归处理，直至最后查找到 Customer 中的 name 属性。
+   */
   private StringBuilder buildProperty(String name, StringBuilder builder) {
     PropertyTokenizer prop = new PropertyTokenizer(name);
     if (prop.hasNext()) {

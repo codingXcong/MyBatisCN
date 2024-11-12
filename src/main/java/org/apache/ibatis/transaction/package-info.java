@@ -14,6 +14,7 @@
  *    limitations under the License.
  */
 /**
- * Base package for transactions.
+ * 持久层框架一般都会提供一套事务管理机制实现数据库的事务控制，MyBatis 对数据库中的事务进行了一层简单的抽象，提供了简单易用的事务接口和实现。
+ * 一般情况下，Java 项目都会集成 Spring，并由 Spring 框架管理事务。
  */
 package org.apache.ibatis.transaction;

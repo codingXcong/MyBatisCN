@@ -32,6 +32,7 @@ import org.apache.ibatis.session.SqlSession;
  * @author Lasse Voss
  *
  * 它被Configuration持有，存着
+ * MapperRegistry 的主要作用就是统一维护 Mapper 接口以及这些 Mapper 的代理对象工厂
  */
 public class MapperRegistry {
 

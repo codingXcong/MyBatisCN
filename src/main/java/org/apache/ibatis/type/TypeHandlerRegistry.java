@@ -55,7 +55,7 @@ public final class TypeHandlerRegistry {
 
   // JDBC类型与对应类型处理器的映射
   private final Map<JdbcType, TypeHandler<?>>  jdbcTypeHandlerMap = new EnumMap<>(JdbcType.class);
-  // Java类型与Map<JdbcType, TypeHandler<?>>的映射
+  // Java类型与Map<JdbcType, TypeHandler<?>>的映射   第一层 Key 是需要转换的 Java 类型，第二层 Key 是转换的目标 JdbcType
   private final Map<Type, Map<JdbcType, TypeHandler<?>>> typeHandlerMap = new ConcurrentHashMap<>();
   // 未知类型的处理器
   private final TypeHandler<Object> unknownTypeHandler = new UnknownTypeHandler(this);

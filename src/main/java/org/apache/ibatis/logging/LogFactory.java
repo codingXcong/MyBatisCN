@@ -93,6 +93,7 @@ public final class LogFactory {
    * @param runnable 用来尝试实现日志实例的操作
    */
   private static void tryImplementation(Runnable runnable) {
+    // logConstructor 如果不为空，则表示已经成功确定当前使用的日志框架，直接返回；如果为空，则在当前线程中执行传入的 Runnable.run() 方法，尝试确定当前使用的日志框架。
     if (logConstructor == null) {
       try {
         runnable.run();

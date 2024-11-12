@@ -14,6 +14,7 @@
  *    limitations under the License.
  */
 /**
- * Base package for languages.
+ *  scripting 模块就是负责动态生成 SQL 的核心模块
+ *  它会根据运行时用户传入的实参，解析动态 SQL 中的标签，并形成 SQL 模板，然后处理 SQL 模板中的占位符，用运行时的实参填充占位符，得到数据库真正可执行的 SQL 语句。
  */
 package org.apache.ibatis.scripting;
